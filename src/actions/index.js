@@ -1,4 +1,9 @@
-// action creator takes a book object with a title
+// "selectBook" action creator takes a book object with its title
+// it needs to return an action--object with a type property
 export function selectBook(book) {
-  console.log('A book has been selected:', book.title);
+  return {
+    // NOTE: better to avoid magic strings
+    type: 'BOOK_SELECTED',
+    payload: book
+  };
 }
